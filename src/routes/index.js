@@ -1,10 +1,14 @@
-import Goods from 'pages/goods/Goods.vue';
-import Ratings from 'pages/Ratings.vue';
-import Seller from 'pages/Seller.vue';
+import Msite from "pages/Msite/Msite"
+import Search from "pages/Search/Search"
+import Order from "pages/Order/Order"
+import Profile from "pages/Profile/Profile"
+import Login from "pages/Login/Login"
 
 export default [
-  {path:"/goods",component:Goods},
-  {path:"/ratings",component:Ratings},
-  {path:"/seller",component:Seller},
-  {path:"/",redirect:"/goods"}
+  {path:"/msite",component:Msite,meta:{showFooter:true}},
+  {path:"/search",component:Search,meta:{showFooter:true}},
+  {path:"/order",component:Order,meta:{showFooter:true}},
+  {path:"/profile",component:Profile,meta:{showFooter:true}},
+  {path:"/login",component:Login,meta:{showFooter:false}},
+  {path:"/",redirect:"/msite"}
 ]

@@ -1,15 +1,27 @@
 export default {
   //请求方法
-  getGoods:{
-    url:"/api/goods",
-    method:"get"
+  // getGoods:{
+  //   url:"/api/goods",
+  //   method:"get"
+  // },
+  // getSellers:{
+  //   url:"/api/sellers",
+  //   method:"get"
+  // },
+  // getRatings:{
+  //   url:"/api/ratings",
+  //   method:"get"
+  // }
+
+  getPosition:{
+    url:"/position",
+    method:"get",
+    //跨域，有corsUrl才能跨域
+    corsUrl:"/4000"
   },
-  getSellers:{
-    url:"/api/sellers",
-    method:"get"
-  },
-  getRatings:{
-    url:"/api/ratings",
+
+  getCategory:{
+    url:"/index_category",
     method:"get"
   }
 }

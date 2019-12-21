@@ -2,7 +2,7 @@ export default (axiosInstance,interfaceObj)=>{
   const api = {};
   //遍历接口对象中的请求方法
   for(name in interfaceObj){
-    const {url,method,isForm} = interfaceObj[name];
+    const {url,method,isForm,corsUrl} = interfaceObj[name];
     api[name] = async (data,config={})=>{
       //数据转换，将传入的js对象，按需求转换为data(json/formdata)或者params
       let transformData = null;
@@ -14,6 +14,13 @@ export default (axiosInstance,interfaceObj)=>{
       }else{
         transformData = data
       }
+
+      if(corsUrl){
+        url = corsUrl +  url
+        corsUrl = ""
+      }
+
+      
 
       //请求的发送
       let res = undefined;
