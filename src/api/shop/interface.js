@@ -22,6 +22,13 @@ export default {
 
   getCategory:{
     url:"/index_category",
-    method:"get"
+    method:"get",
+    corsUrl:"/4000"
+  },
+
+  getShops:{
+    url:"/shops",
+    method:"get",
+    corsUrl:"/4000"
   }
 }

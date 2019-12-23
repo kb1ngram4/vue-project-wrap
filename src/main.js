@@ -2,8 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import http from '@/api'
-
-// import axios from 'axios'
+import store from "@/store"
 Vue.config.productionTip = false;
 Vue.prototype.$http = http
 // Vue.prototype.bus = new Vue()
@@ -11,7 +10,8 @@ Vue.prototype.$http = http
 
 new Vue({
   render: h => h(App),
-  router
+  router,
+  store
 }).$mount('#app');
 
 
