@@ -1,4 +1,4 @@
-import { GETPOSITION,GETCATEGORY,GETSHOPS } from "./mutations_types";
+import { GETPOSITION,GETCATEGORY,GETSHOPS,GETUSER } from "./mutations_types";
 export default {
   [GETPOSITION](state,position){
     state.position = position
@@ -10,5 +10,8 @@ export default {
 
   [GETSHOPS](state,shops){
     state.shops = shops
+  },
+  [GETUSER](state,user){
+    state.user = user
   }
 }

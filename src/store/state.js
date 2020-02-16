@@ -4,5 +4,6 @@ export default {
   longitude: "116.36867",
   position:{},
   category:{},
-  shops:{}
+  shops:{},
+  user:{}
 }
